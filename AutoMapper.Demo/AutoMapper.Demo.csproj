@@ -182,6 +182,10 @@
     <Compile Include="Migrations\201506291504182_InitialDB.Designer.cs">
       <DependentUpon>201506291504182_InitialDB.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201506291610511_RevisaoEstrutura.cs" />
+    <Compile Include="Migrations\201506291610511_RevisaoEstrutura.Designer.cs">
+      <DependentUpon>201506291610511_RevisaoEstrutura.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Contexto\ContextoDB.cs" />
@@ -289,6 +293,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201506291504182_InitialDB.resx">
       <DependentUpon>201506291504182_InitialDB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201506291610511_RevisaoEstrutura.resx">
+      <DependentUpon>201506291610511_RevisaoEstrutura.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

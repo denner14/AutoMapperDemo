@@ -19,6 +19,12 @@ namespace AutoMapper.Demo.Models.Dominio
 
         [Key]
         public int ItemId { get; set; }
+
+        //Chave Estrangeira
+        public int PedidoId { get; set; }
+
+        public virtual Pedido Pedido { get; set; }
+
      
 
 
