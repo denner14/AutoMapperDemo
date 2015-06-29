@@ -1,6 +1,12 @@
 using System.Data.Entity.ModelConfiguration.Conventions;
 using AutoMapper.Demo.Models.Dominio;
 
+using System;
+using System.Data.Entity;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.Linq;
+
+
 namespace AutoMapper.Demo.Models.Contexto
 {
     using System;
@@ -38,6 +44,8 @@ namespace AutoMapper.Demo.Models.Contexto
 
             modelBuilder.Properties<string>()
                 .Configure(p => p.HasMaxLength(150));
+
+           
         }
     }
 }

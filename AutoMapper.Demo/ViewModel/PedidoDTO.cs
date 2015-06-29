@@ -16,6 +16,9 @@ namespace AutoMapper.Demo.ViewModel
         [Display(Name = "Número")]
         public string NrPedido { get; set; }
 
+        [Display(Name = "Entregar?")]
+        public string Entregar { get; set; }
+
         [Display(Name = "Itens do Pedido")]
         public virtual IEnumerable<ItensPedido> LinhaPedido { get; set; }
     }

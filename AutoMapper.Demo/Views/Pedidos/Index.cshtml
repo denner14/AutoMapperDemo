@@ -1,5 +1,7 @@
-﻿
-
+﻿<div class="row">
+    <hr/>
+</div>
+<div class="well">
 
     @foreach (var item in Model)
     {
@@ -10,30 +12,35 @@
             <div class="col-md-5">
                 Cliente: @item.NomeCliente
             </div>
-            
-            <div class="col-md-5">
+
+            <div class="col-md-3">
                 Total R$  @item.Total
             </div>
+            
+            <div class="col-md-2">
+                Entregar:  @item.Entregar
+            </div>
         </div>
-          
-          
-                <ul>
-                    @foreach (var produto in item.LinhaPedido)
-                    {
-                        
-                        <li>
-                            <div class="row">
-                                @produto.Produto
-                                @produto.Quantidade
-                                @produto.Preco
-                                @produto.PrecoTotal()
-                            </div>                           
-                        </li>
 
-                       
-                    }
-                </ul>
-         
+
+        <ul>
+            @foreach (var produto in item.LinhaPedido)
+            {
+
+                <li>
+                    <div class="row well-sm">
+                        @produto.Produto
+                        @produto.Quantidade
+                        @produto.Preco
+                        @produto.PrecoTotal()
+                    </div>
+                </li>
+
+
+            }
+        </ul>
+
     }
 
 
+</div>
