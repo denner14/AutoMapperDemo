@@ -13,7 +13,7 @@ namespace AutoMapper.Demo.Models.Contexto
         public ContextoDB()
             : base("name=ContextoDB")
         {
-            Database.SetInitializer(new CriarDados());
+           // Database.SetInitializer(new CriarDados());
         }
 
         public DbSet<Cliente> Clientes { get; set; }
