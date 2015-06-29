@@ -8,6 +8,7 @@ using System.Web;
 using System.Web.Mvc;
 using AutoMapper.Demo.Models.Contexto;
 using AutoMapper.Demo.Models.Dominio;
+using AutoMapper.Demo.ViewModel;
 
 namespace AutoMapper.Demo.Controllers.Operacional
 {
@@ -18,7 +19,26 @@ namespace AutoMapper.Demo.Controllers.Operacional
         // GET: Pedidos
         public ActionResult Index()
         {
-            return View(db.Pedidos.ToList());
+
+            var pedidos = db.Pedidos.ToList();         
+
+            // Exemplo - Automapeamento de Campos Nomes diferentes.
+
+            Mapper.CreateMap<Pedido, PedidoDTO>()
+                .ForMember(d => d.NomeCliente, o => o.MapFrom(p=>p.Cliente.PegaNome()))
+                .ForMember(d => d.Total, o => o.MapFrom(p => p.TotalPedido()))               
+                .ForMember(d => d.NrPedido, o => o.MapFrom(p=>p.NumeroPedido));
+
+            Mapper.CreateMap<ItensPedido, ItensPedidoDTO>();
+
+          
+            var model = Mapper.Map<IEnumerable<Pedido>, IEnumerable<PedidoDTO>>(pedidos);
+
+
+
+            return View(model);
+
+            //return View(db.Pedidos.ToList());
         }
 
         // GET: Pedidos/Details/5

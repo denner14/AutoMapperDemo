@@ -8,12 +8,13 @@ namespace AutoMapper.Demo.Models.Dominio
 {
     public class Pedido
     {
+      
          [Key]
         public int PedidoId { get; set; }
         public string NumeroPedido { get; set; }
-        public Cliente Cliente { get; set; }
+        public virtual Cliente Cliente { get; set; }
         public DateTime DataCompra { get; set; }
-        public IEnumerable<ItensPedido> LinhaPedido { get; set; }
+        public virtual IEnumerable<ItensPedido> LinhaPedido { get; set; }
         public bool Entregar { get; set; }
         public decimal TotalPedido()
         {

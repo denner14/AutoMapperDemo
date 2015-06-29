@@ -1,51 +1,39 @@
-﻿@model IEnumerable<AutoMapper.Demo.Models.Dominio.Pedido>
+﻿
 
-@{
-    ViewBag.Title = "Index";
-}
 
-<h2>Index</h2>
+    @foreach (var item in Model)
+    {
+        <div class="row">
+            <div class="col-md-2">
+                Pedido: @item.NrPedido
+            </div>
+            <div class="col-md-5">
+                Cliente: @item.NomeCliente
+            </div>
+            
+            <div class="col-md-5">
+                Total R$  @item.Total
+            </div>
+        </div>
+          
+          
+                <ul>
+                    @foreach (var produto in item.LinhaPedido)
+                    {
+                        
+                        <li>
+                            <div class="row">
+                                @produto.Produto
+                                @produto.Quantidade
+                                @produto.Preco
+                                @produto.PrecoTotal()
+                            </div>                           
+                        </li>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.NumeroPedido)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.DataCompra)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Entregar)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.InternalId)
-        </th>
-        <th></th>
-    </tr>
+                       
+                    }
+                </ul>
+         
+    }
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.NumeroPedido)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.DataCompra)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Entregar)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.InternalId)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.PedidoId }) |
-            @Html.ActionLink("Details", "Details", new { id=item.PedidoId }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.PedidoId })
-        </td>
-    </tr>
-}
 
-</table>

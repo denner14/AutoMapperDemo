@@ -8,8 +8,7 @@ namespace AutoMapper.Demo.Models.Dominio
 {
     public class ItensPedido
     {
-        [Key]
-        public int ItemId { get; set; }
+      
         public decimal Preco { get; set; }
         public string Produto { get; set; }
         public int Quantidade { get; set; }
@@ -17,5 +16,11 @@ namespace AutoMapper.Demo.Models.Dominio
         {
             return Preco * Quantidade;
         }
+
+        [Key]
+        public int ItemId { get; set; }
+     
+
+
     }
 }

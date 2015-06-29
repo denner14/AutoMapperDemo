@@ -3,7 +3,7 @@ namespace AutoMapper.Demo.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class InitalDB : DbMigration
+    public partial class InitialDB : DbMigration
     {
         public override void Up()
         {

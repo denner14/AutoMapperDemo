@@ -14,9 +14,9 @@ namespace AutoMapper.Demo.ViewModel
         [Display(Name = "Total do Pedido")]
         public decimal Total { get; set; }
         [Display(Name = "Número")]
-        public string NumeroPedido { get; set; }
+        public string NrPedido { get; set; }
 
         [Display(Name = "Itens do Pedido")]
-        public IEnumerable<ItensPedido> LinhaPedido { get; set; }
+        public virtual IEnumerable<ItensPedido> LinhaPedido { get; set; }
     }
 }

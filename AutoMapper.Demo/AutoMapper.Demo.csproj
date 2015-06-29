@@ -178,9 +178,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201506290030404_InitalDB.cs" />
-    <Compile Include="Migrations\201506290030404_InitalDB.Designer.cs">
-      <DependentUpon>201506290030404_InitalDB.cs</DependentUpon>
+    <Compile Include="Migrations\201506291504182_InitialDB.cs" />
+    <Compile Include="Migrations\201506291504182_InitialDB.Designer.cs">
+      <DependentUpon>201506291504182_InitialDB.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -194,6 +194,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="ViewModel\ClienteDTO.cs" />
+    <Compile Include="ViewModel\ItensPedidoDTO.cs" />
     <Compile Include="ViewModel\PedidoDTO.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -205,6 +206,7 @@
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="ClassDiagram1.cd" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -285,8 +287,8 @@
     <None Include="Project_Readme.html" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201506290030404_InitalDB.resx">
-      <DependentUpon>201506290030404_InitalDB.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201506291504182_InitialDB.resx">
+      <DependentUpon>201506291504182_InitialDB.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
