@@ -1,5 +1,5 @@
 ﻿<div class="row">
-    <hr/>
+    <hr />
 </div>
 <div class="well">
 
@@ -10,35 +10,65 @@
                 Pedido: @item.NrPedido
             </div>
             <div class="col-md-5">
-                Cliente: @item.NomeCliente
+                Cliente:<em> @item.NomeCliente</em>
             </div>
 
             <div class="col-md-3">
                 Total R$  @item.Total
             </div>
-            
+
             <div class="col-md-2">
                 Entregar:  @item.Entregar
             </div>
         </div>
 
 
-        <ul>
-            @foreach (var produto in item.LinhaPedido)
-            {
 
-                <li>
-                    <div class="row well-sm">
-                        @produto.Produto
-                        @produto.Quantidade
-                        @produto.Preco
-                        @produto.PrecoTotal()
+        <div class="col-md-12">
+            <hr />
+            <dl>
+                <dt>
+                    <div class="col-md-5">
+                        <strong>Produto</strong>
                     </div>
-                </li>
+                    <div class="col-md-1">
+                        <strong>Quantidade</strong>
+                    </div>
 
+                    <div class="col-md-1">
+                        <strong>Preço</strong>
+                    </div>
+                    <div class="col-md-2">
+                        <strong>Total</strong>
+                    </div>
+                </dt>
 
-            }
-        </ul>
+                @foreach (var produto in item.LinhaPedido)
+                {
+                    <div class="row alert-info">
+                       
+                       
+                        <dd>
+                            <div class="col-md-5">
+                                @produto.Produto
+                            </div>
+                            <div class="col-md-1">
+                                @produto.Quantidade
+                            </div>
+
+                            <div class="col-md-1">
+                                @produto.Preco
+                            </div>
+                            <div class="col-md-2">
+                                R$.  @produto.PrecoTotal()
+                            </div>
+                        </dd>
+                    </div>
+
+                }
+            </dl>
+            <hr />
+        </div>
 
     }
 

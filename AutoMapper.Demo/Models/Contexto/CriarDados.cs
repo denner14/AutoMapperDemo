@@ -31,7 +31,8 @@ namespace AutoMapper.Demo.Models.Contexto
                     new Cliente {Nome = "Luiz Fernando", Sobrenome = "Pientka"},
                     new Cliente {Nome = "Fabiana", Sobrenome = "de Cosma Fernandes"},
                     new Cliente {Nome = "Solange", Sobrenome = "Ferreira Cosma"},
-                    new Cliente {Nome = "Soleide", Sobrenome = "Ferreira Cosma"}
+                    new Cliente {Nome = "Soleide", Sobrenome = "Ferreira Cosma"},
+                    new Cliente {Nome = "André", Sobrenome = "Bineli",Bio = "Analista de sistemas"}
                 };
 
                 listaClientes.ForEach(i => context.Clientes.AddOrUpdate(i));
@@ -40,6 +41,31 @@ namespace AutoMapper.Demo.Models.Contexto
 
                 var listaPedidos = new List<Pedido>
                 {
+                    new Pedido
+                    {
+                        Cliente = context.Clientes.FirstOrDefault(x=>x.Nome.Contains("André")),
+                        NumeroPedido = "000.002",
+                        DataCompra = new DateTime(2015, 6, 28),
+                        Entregar = false,
+                        InternalId = new Guid(),
+                        LinhaPedido = new List<ItensPedido>
+                        {
+                                new ItensPedido
+                                {                                    
+                                    Preco = 2.4m,
+                                    Produto = "Pão de Frances",
+                                    Quantidade = 13
+                                },
+                                  new ItensPedido
+                                {                                    
+                                    Preco = 5.4m,
+                                    Produto = "Café",
+                                    Quantidade = 13
+                                }
+                        }
+                       
+                    },
+
                     new Pedido
                     {
                         Cliente = context.Clientes.Find(1),

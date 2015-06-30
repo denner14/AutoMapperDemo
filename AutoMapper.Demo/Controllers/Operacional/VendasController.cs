@@ -8,6 +8,7 @@ using System.Web;
 using System.Web.Mvc;
 using AutoMapper.Demo.Models.Contexto;
 using AutoMapper.Demo.Models.Dominio;
+using AutoMapper.Demo.ViewModel;
 
 namespace AutoMapper.Demo.Controllers.Operacional
 {
@@ -18,7 +19,15 @@ namespace AutoMapper.Demo.Controllers.Operacional
         // GET: Vendas
         public ActionResult Index()
         {
-            return View(db.ItensPedidos.ToList());
+            var vendas = db.ItensPedidos.ToList();
+          
+            Mapper.CreateMap<ItensPedido, ItensPedidoDTO>()
+                .ForMember(d => d.Cliente, o => o.MapFrom(p => p.Pedido.Cliente.PegaNome()))
+                .ForMember(d => d.Total, o => o.MapFrom(p => p.PrecoTotal()));
+
+            var model = Mapper.Map<IEnumerable<ItensPedido>, IEnumerable<ItensPedidoDTO>>(vendas);
+
+            return View(model);
         }
 
         // GET: Vendas/Details/5

@@ -10,5 +10,7 @@ namespace AutoMapper.Demo.ViewModel
         public string Produto { get; set; }
         public int Quantidade { get; set; }
         public decimal Preco { get; set; }
+        public decimal Total{ get; set; }
+        public String Cliente { get; set; }
     }
 }
