@@ -173,6 +173,7 @@
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\Operacional\ClientesController.cs" />
     <Compile Include="Controllers\Operacional\EmpresasController.cs" />
+    <Compile Include="Controllers\Operacional\Pedidos2Controller.cs" />
     <Compile Include="Controllers\Operacional\PedidosController.cs" />
     <Compile Include="Controllers\Operacional\VendasController.cs" />
     <Compile Include="Global.asax.cs">
@@ -281,6 +282,11 @@
     <Content Include="Views\Vendas\Details.cshtml" />
     <Content Include="Views\Vendas\Edit.cshtml" />
     <Content Include="Views\Vendas\Index.cshtml" />
+    <Content Include="Views\Pedidos2\Create.cshtml" />
+    <Content Include="Views\Pedidos2\Delete.cshtml" />
+    <Content Include="Views\Pedidos2\Details.cshtml" />
+    <Content Include="Views\Pedidos2\Edit.cshtml" />
+    <Content Include="Views\Pedidos2\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

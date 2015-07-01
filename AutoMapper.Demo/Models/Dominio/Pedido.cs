@@ -14,6 +14,8 @@ namespace AutoMapper.Demo.Models.Dominio
         public string NumeroPedido { get; set; }
         public virtual Cliente Cliente { get; set; }
         public DateTime DataCompra { get; set; }
+       // public virtual IEnumerable<ItensPedido> LinhaPedido { get; set; } ---> Causa erro ///Cuidado
+
         public virtual ICollection<ItensPedido> LinhaPedido { get; set; }
         public bool Entregar { get; set; }
         public decimal TotalPedido()
