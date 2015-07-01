@@ -20,7 +20,9 @@ namespace AutoMapper.Demo.Controllers.Operacional
         public ActionResult Index()
         {
 
-            var pedidos = db.Pedidos.Include("LinhaPedido").ToList();         
+            //var pedidos = db.Pedidos.Include("LinhaPedido").ToList();
+
+            var pedidos = db.Pedidos.ToList();         
 
             // Exemplo - Automapeamento de Campos Nomes diferentes.
 

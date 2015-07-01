@@ -12,5 +12,7 @@ namespace AutoMapper.Demo.ViewModel
         public int ClienteId { get; set; }
         public string Bio { get; set; }
         public string Nome { get; set; }
+          [Display(Name = "Nome Completo")]
+        public string NomeCompleto { get; set; }
     }
 }

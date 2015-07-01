@@ -14,9 +14,13 @@
         <th>
             @Html.DisplayNameFor(model => model.Bio)
         </th>
-        <th>
+        @*<th>
             @Html.DisplayNameFor(model => model.Nome)
+        </th>*@
+        <th>
+            @Html.DisplayNameFor(model => model.NomeCompleto)
         </th>
+
         @*<th>
             @Html.DisplayNameFor(model => model.Sobrenome)
         </th>*@
@@ -28,8 +32,11 @@
         <td>
             @Html.DisplayFor(modelItem => item.Bio)
         </td>
-        <td>
+        @*<td>
             @Html.DisplayFor(modelItem => item.Nome)
+        </td>*@
+        <td>
+            @Html.DisplayFor(modelItem => item.NomeCompleto)
         </td>
         @*<td>
             @Html.DisplayFor(modelItem => item.Sobrenome)

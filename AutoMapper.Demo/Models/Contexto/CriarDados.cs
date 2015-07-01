@@ -23,7 +23,7 @@ namespace AutoMapper.Demo.Models.Contexto
         {
             try
             {
-                context.Database.Log = Console.Write;
+               // context.Database.Log = Console.Write;
 
                var listaClientes = new List<Cliente>
                 {
@@ -32,6 +32,7 @@ namespace AutoMapper.Demo.Models.Contexto
                     new Cliente {Nome = "Fabiana", Sobrenome = "de Cosma Fernandes"},
                     new Cliente {Nome = "Solange", Sobrenome = "Ferreira Cosma"},
                     new Cliente {Nome = "Soleide", Sobrenome = "Ferreira Cosma"},
+                    new Cliente {Nome = "Valdir", Sobrenome = "Antonio da Silva"},
                     new Cliente {Nome = "André", Sobrenome = "Bineli",Bio = "Analista de sistemas"}
                 };
 

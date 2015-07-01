@@ -23,21 +23,18 @@
     <ShowAsAssociation>
       <Property Name="Cliente" />
     </ShowAsAssociation>
-    <ShowAsCollectionAssociation>
-      <Property Name="LinhaPedido" />
-    </ShowAsCollectionAssociation>
   </Class>
   <Class Name="AutoMapper.Demo.ViewModel.ClienteDTO">
     <Position X="1.25" Y="3.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAACBAAAAAAAAAAAAAAAAAAAAEAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAACBAAAAAAAAAAAAAAAAAAAIEAAAA=</HashCode>
       <FileName>ViewModel\ClienteDTO.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="AutoMapper.Demo.ViewModel.ItensPedidoDTO">
     <Position X="6.25" Y="3.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAUAAAAAAE=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAACAAAAAAAAAQAAAAAAUAAAAAAE=</HashCode>
       <FileName>ViewModel\ItensPedidoDTO.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -47,6 +44,9 @@
       <HashCode>AQAAAAAEAAAAAAAAAgAAQAAAAAAAQAAAAAAAAAAAAAA=</HashCode>
       <FileName>ViewModel\PedidoDTO.cs</FileName>
     </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="LinhaPedido" />
+    </ShowAsCollectionAssociation>
   </Class>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>

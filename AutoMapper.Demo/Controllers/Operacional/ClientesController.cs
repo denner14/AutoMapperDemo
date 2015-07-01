@@ -19,7 +19,8 @@ namespace AutoMapper.Demo.Controllers.Operacional
         // GET: Clientes
         public ActionResult Index()
         {
-            var clientes = db.Clientes.ToList();
+           // var clientes = db.Clientes.Where(c=>c.Nome.StartsWith("S")).ToList();
+             var clientes = db.Clientes.ToList();
 
             //AutoMapper.Mapper.CreateMap<Cliente, ClienteDTO>();
             //var model = AutoMapper.Mapper.Map<IEnumerable<Cliente>, IEnumerable<ClienteDTO>>(clientes);
@@ -27,7 +28,10 @@ namespace AutoMapper.Demo.Controllers.Operacional
 
             // Exemplo - Automapeamento de Campos nulos para valor padrão.
 
-            AutoMapper.Mapper.CreateMap<Cliente, ClienteDTO>().ForMember(d=>d.Bio,o=>o.NullSubstitute("Não foi informado."));
+            AutoMapper.Mapper.CreateMap<Cliente, ClienteDTO>()
+                .ForMember(d => d.Bio, o => o.NullSubstitute("Não foi informado."))
+                .ForMember(d => d.NomeCompleto, o => o.MapFrom(p => p.PegaNome()));
+
             var model = AutoMapper.Mapper.Map<IEnumerable<Cliente>, IEnumerable<ClienteDTO>>(clientes);
 
 

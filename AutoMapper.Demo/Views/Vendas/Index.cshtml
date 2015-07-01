@@ -11,19 +11,23 @@
 </p>
 <table class="table">
     <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Preco)
-        </th>
+       
         <th>
             @Html.DisplayNameFor(model => model.Produto)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Quantidade)
         </th>
-       
         <th>
-           <strong>Cliente</strong>
+            @Html.DisplayNameFor(model => model.Preco)
         </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Total)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Cliente)
+        </th>
+       
     </tr>
 
 @foreach (var item in Model) {
